@@ -1,0 +1,5 @@
+work	"game_package.vhd"
+work	"ipcore_dir/clock_div.vhd"
+work	"pix_gen_new.vhd"
+work	"top_module.vhd"
+work	"vga_sync.vhd"

@@ -1,0 +1,6 @@
+vhdl work "ipcore_dir/clock_div.vhd"
+vhdl work "game_package.vhd"
+vhdl work "vga_sync.vhd"
+vhdl work "pix_gen_new.vhd"
+vhdl work "top_module.vhd"
+vhdl work "testing_random.vhd"

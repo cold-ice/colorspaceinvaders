@@ -1,0 +1,70 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Wed Jul 08 10:48:15 2015
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "H" LOCATE = SITE "B11" LEVEL 1;
+COMP "V" LOCATE = SITE "B12" LEVEL 1;
+COMP "reset" LOCATE = SITE "U9" LEVEL 1;
+COMP "ps2clk" LOCATE = SITE "F4" LEVEL 1;
+COMP "sw" LOCATE = SITE "U8" LEVEL 1;
+COMP "Gout<1>" LOCATE = SITE "A5" LEVEL 1;
+COMP "error" LOCATE = SITE "K5" LEVEL 1;
+COMP "Gout<2>" LOCATE = SITE "B6" LEVEL 1;
+COMP "Gout<3>" LOCATE = SITE "A6" LEVEL 1;
+COMP "Gout<0>" LOCATE = SITE "C6" LEVEL 1;
+COMP "ps2data" LOCATE = SITE "B2" LEVEL 1;
+COMP "reset_key" LOCATE = SITE "C12" LEVEL 1;
+COMP "reading" LOCATE = SITE "H6" LEVEL 1;
+COMP "seg<0>" LOCATE = SITE "L3" LEVEL 1;
+COMP "seg<1>" LOCATE = SITE "N1" LEVEL 1;
+COMP "seg<2>" LOCATE = SITE "L5" LEVEL 1;
+COMP "seg<3>" LOCATE = SITE "L4" LEVEL 1;
+COMP "seg<4>" LOCATE = SITE "K3" LEVEL 1;
+COMP "seg<5>" LOCATE = SITE "M2" LEVEL 1;
+COMP "seg<6>" LOCATE = SITE "L6" LEVEL 1;
+COMP "Bout<1>" LOCATE = SITE "C7" LEVEL 1;
+COMP "Rout<2>" LOCATE = SITE "C5" LEVEL 1;
+COMP "Bout<2>" LOCATE = SITE "D7" LEVEL 1;
+COMP "Rout<1>" LOCATE = SITE "B4" LEVEL 1;
+COMP "Bout<3>" LOCATE = SITE "D8" LEVEL 1;
+COMP "Rout<3>" LOCATE = SITE "A4" LEVEL 1;
+COMP "Rout<0>" LOCATE = SITE "A3" LEVEL 1;
+COMP "Bout<0>" LOCATE = SITE "B7" LEVEL 1;
+COMP "clock" LOCATE = SITE "E3" LEVEL 1;
+COMP "an<0>" LOCATE = SITE "N6" LEVEL 1;
+COMP "an<1>" LOCATE = SITE "M6" LEVEL 1;
+COMP "an<2>" LOCATE = SITE "M3" LEVEL 1;
+COMP "an<3>" LOCATE = SITE "N5" LEVEL 1;
+COMP "an<4>" LOCATE = SITE "N2" LEVEL 1;
+COMP "an<5>" LOCATE = SITE "N4" LEVEL 1;
+COMP "an<6>" LOCATE = SITE "L1" LEVEL 1;
+COMP "an<7>" LOCATE = SITE "M1" LEVEL 1;
+TIMEGRP CLK_clkout1 = BEL "CLK/clkout2_buf" BEL "LEDMODULE/Disp/cnt_19" BEL
+        "LEDMODULE/Disp/cnt_18" BEL "LEDMODULE/Disp/cnt_17" BEL
+        "LEDMODULE/Disp/cnt_16" BEL "LEDMODULE/Disp/cnt_15" BEL
+        "LEDMODULE/Disp/cnt_14" BEL "LEDMODULE/Disp/cnt_13" BEL
+        "LEDMODULE/Disp/cnt_12" BEL "LEDMODULE/Disp/cnt_11" BEL
+        "LEDMODULE/Disp/cnt_10" BEL "LEDMODULE/Disp/cnt_9" BEL
+        "LEDMODULE/Disp/cnt_8" BEL "LEDMODULE/Disp/cnt_7" BEL
+        "LEDMODULE/Disp/cnt_6" BEL "LEDMODULE/Disp/cnt_5" BEL
+        "LEDMODULE/Disp/cnt_4" BEL "LEDMODULE/Disp/cnt_3" BEL
+        "LEDMODULE/Disp/cnt_2" BEL "LEDMODULE/Disp/cnt_1" BEL
+        "LEDMODULE/Disp/cnt_0";
+TIMEGRP CLK_clkout0 = BEL "CLK/clkout1_buf" BEL "SYNC/column_9" BEL
+        "SYNC/column_8" BEL "SYNC/column_7" BEL "SYNC/column_6" BEL
+        "SYNC/column_5" BEL "SYNC/column_4" BEL "SYNC/column_3" BEL
+        "SYNC/column_2" BEL "SYNC/column_1" BEL "SYNC/column_0" BEL
+        "SYNC/video_on" BEL "SYNC/vid_on" BEL "SYNC/H" BEL "SYNC/V" BEL
+        "SYNC/vertical_9" BEL "SYNC/vertical_8" BEL "SYNC/vertical_7" BEL
+        "SYNC/vertical_6" BEL "SYNC/vertical_5" BEL "SYNC/vertical_4" BEL
+        "SYNC/vertical_3" BEL "SYNC/vertical_2" BEL "SYNC/vertical_1" BEL
+        "SYNC/vertical_0";
+PIN CLK/mmcm_adv_inst_pins<2> = BEL "CLK/mmcm_adv_inst" PINNAME CLKIN1;
+TIMEGRP sys_clk_pin = PIN "CLK/mmcm_adv_inst_pins<2>";
+TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+TS_CLK_clkout1 = PERIOD TIMEGRP "CLK_clkout1" TS_sys_clk_pin HIGH 50%;
+TS_CLK_clkout0 = PERIOD TIMEGRP "CLK_clkout0" TS_sys_clk_pin * 0.251748252
+        HIGH 50%;
+SCHEMATIC END;
+

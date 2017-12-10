@@ -1,0 +1,40 @@
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "secureip" -o "C:/Users/korisnik/Documents/CA ASSIGNMENT/game_new_june/testing_random_isim_beh.exe" -prj "C:/Users/korisnik/Documents/CA ASSIGNMENT/game_new_june/testing_random_beh.prj" "work.testing_random" 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/korisnik/Documents/CA ASSIGNMENT/game_new_june/ipcore_dir/clock_div.vhd" into library work
+Parsing VHDL file "C:/Users/korisnik/Documents/CA ASSIGNMENT/game_new_june/game_package.vhd" into library work
+Parsing VHDL file "C:/Users/korisnik/Documents/CA ASSIGNMENT/game_new_june/vga_sync.vhd" into library work
+Parsing VHDL file "C:/Users/korisnik/Documents/CA ASSIGNMENT/game_new_june/pix_gen_new.vhd" into library work
+Parsing VHDL file "C:/Users/korisnik/Documents/CA ASSIGNMENT/game_new_june/top_module.vhd" into library work
+Parsing VHDL file "C:/Users/korisnik/Documents/CA ASSIGNMENT/game_new_june/testing_random.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package math_real
+Compiling package numeric_std
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling package vcomponents
+Compiling package game_package
+Compiling package std_logic_signed
+Compiling package textio
+Compiling package vital_timing
+Compiling package vital_primitives
+Compiling package vpkg
+Compiling architecture ibufg_v of entity IBUFG [\IBUFG("DONT_CARE","0",true,"DEF...]
+Compiling architecture mmcme2_adv_v of entity MMCME2_ADV [\MMCME2_ADV:testing_random:uut:c...]
+Compiling architecture bufg_v of entity BUFG [bufg_default]
+Compiling architecture xilinx of entity clock_div [\clock_div:testing_random:uut:cl...]
+Compiling architecture behaviour1 of entity vga_sync [vga_sync_default]
+Compiling architecture behavioral of entity pix_gen_new [pix_gen_new_default]
+Compiling architecture behavioral of entity top_module [\top_module:testing_random:uut:\]
+Compiling architecture behavior of entity testing_random
+Time Resolution for simulation is 1ps.
+Waiting for 7 sub-compilation(s) to finish...
+Compiled 28 VHDL Units
+Built simulation executable C:/Users/korisnik/Documents/CA ASSIGNMENT/game_new_june/testing_random_isim_beh.exe
+Fuse Memory Usage: 59896 KB
+Fuse CPU Usage: 1513 ms
